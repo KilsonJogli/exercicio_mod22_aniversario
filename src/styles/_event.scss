@@ -1,0 +1,52 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &--place {
+        background-image: linear-gradient(variables.$pink, variables.$purple);
+    }
+
+    &--gift {
+        background-image: linear-gradient(variables.$purple, variables.$red);
+    }
+
+    &--dresscode {
+        background-image: linear-gradient(variables.$red, variables.$brown);
+    }
+
+    &--menu {
+        background-image: linear-gradient(variables.$brown, variables.$brown);
+    }
+
+    &--imagem-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__details {
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin-bottom: 16px;
+        }
+    }
+}

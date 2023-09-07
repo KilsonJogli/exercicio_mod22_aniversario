@@ -1,0 +1,27 @@
+@use '../variables';
+
+.button {
+    color: variables.$textColor;
+    background-color: #6ab04c;
+
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .1s ease;
+    white-space: nowrap;
+    
+
+    &:hover {
+        background-color: red;
+    }
+    
+
+    @media (max-width: 640px) {
+        display: block;
+        text-align: center;
+
+        
+    }
+}

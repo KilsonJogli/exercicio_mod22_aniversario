@@ -1,0 +1,53 @@
+@use 'variables';
+
+.hero {
+    background-image: url(../images/backgroun.png);
+    background-size: cover;
+    min-height: 99vh;
+    background-position: center;
+    position: relative;
+    padding: 40px 0;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        background-color: variables.$secondaryTextColor;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text {
+        margin: 64px 0;
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 56px;
+    }
+
+    @media (max-width: 640px) {
+        padding: 0 0 40px;
+        min-height: auto;
+
+        &__logo {
+            max-height: 275px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
